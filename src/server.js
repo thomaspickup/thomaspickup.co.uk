@@ -4,6 +4,9 @@ import { MongoClient } from 'mongodb';
 import path from 'path';
 
 const app = express();
+const https = require('https');
+const http = express();
+const fs = require('fs');
 
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, '/build')));
@@ -21,6 +24,7 @@ const withDB = async (operations, res) => {
   }
 }
 
+// Gets the Article Name
 app.get('/api/articles/:name', async (req, res) => {
   withDB(async (db) => {
     const articleName = req.params.name;
@@ -29,6 +33,7 @@ app.get('/api/articles/:name', async (req, res) => {
   }, res);
 });
 
+// Allows users to upvote
 app.post('/api/articles/:name/upvote', async (req, res) => {
   withDB(async (db) => {
     const articleName = req.params.name;
@@ -46,6 +51,7 @@ app.post('/api/articles/:name/upvote', async (req, res) => {
   }, res);
 });
 
+// Adds comments
 app.post('/api/articles/:name/add-comment', (req, res) => {  
   withDB(async (db) => {
     const { username, text } = req.body;
@@ -64,8 +70,24 @@ app.post('/api/articles/:name/add-comment', (req, res) => {
   }, res);
 });
 
-
+// Redirects all non API Calls to the static page
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname + '/build/index.html'));
 });
-app.listen(80, () => console.log('Listenting on port 8000'));
+
+// Sets up a HTTPS SERVER
+const httpsServer = https.createServer({
+  key: fs.readFileSync('/etc/letsencrypt/live/dev.thomaspickup.co.uk/privkey.pem'),
+  cert: fs.readFileSync('/etc/letsencrypt/live/dev.thomaspickup.co.uk/fullchain.pem'),
+}, app);
+
+httpsServer.listen(443, () => {
+    console.log('HTTPS Server running on port 443');
+});
+
+// Redirects the HTTP URL to HTTPS
+http.get('*', function(req, res) {  
+    res.redirect('https://' + req.headers.host + req.url);
+});
+
+http.listen(80);
