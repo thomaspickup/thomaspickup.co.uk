@@ -1,27 +1,32 @@
 {
   "files": {
     "main.css": "/static/css/main.cc2fe4d3.chunk.css",
-    "main.js": "/static/js/main.bae587c5.chunk.js",
-    "main.js.map": "/static/js/main.bae587c5.chunk.js.map",
+    "main.js": "/static/js/main.55eac7c8.chunk.js",
+    "main.js.map": "/static/js/main.55eac7c8.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.f693082c.js",
     "runtime-main.js.map": "/static/js/runtime-main.f693082c.js.map",
-    "static/js/2.f12504b9.chunk.js": "/static/js/2.f12504b9.chunk.js",
-    "static/js/2.f12504b9.chunk.js.map": "/static/js/2.f12504b9.chunk.js.map",
+    "static/js/2.6547fe7b.chunk.js": "/static/js/2.6547fe7b.chunk.js",
+    "static/js/2.6547fe7b.chunk.js.map": "/static/js/2.6547fe7b.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.000b63b49fce20cf307d2a70fb3cfe46.js": "/precache-manifest.000b63b49fce20cf307d2a70fb3cfe46.js",
+    "precache-manifest.7bfcf8daa1525aa5793964e7c5fdcb2b.js": "/precache-manifest.7bfcf8daa1525aa5793964e7c5fdcb2b.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.cc2fe4d3.chunk.css.map": "/static/css/main.cc2fe4d3.chunk.css.map",
-    "static/js/2.f12504b9.chunk.js.LICENSE.txt": "/static/js/2.f12504b9.chunk.js.LICENSE.txt",
+    "static/js/2.6547fe7b.chunk.js.LICENSE.txt": "/static/js/2.6547fe7b.chunk.js.LICENSE.txt",
+    "static/js/main.55eac7c8.chunk.js.LICENSE.txt": "/static/js/main.55eac7c8.chunk.js.LICENSE.txt",
+    "static/media/ayo-ogunseinde-2.jpg": "/static/media/ayo-ogunseinde-2.bfc688ca.jpg",
+    "static/media/clem-onojeghuo-2.jpg": "/static/media/clem-onojeghuo-2.bb4b9ac9.jpg",
     "static/media/clem-onojeghuo-3.jpg": "/static/media/clem-onojeghuo-3.ae11d928.jpg",
     "static/media/erik-lucatero-2.jpg": "/static/media/erik-lucatero-2.2051e0e8.jpg",
     "static/media/header.jpg": "/static/media/header.85d6dbd9.jpg",
     "static/media/joe-gardner-2.jpg": "/static/media/joe-gardner-2.76ff47ae.jpg",
-    "static/media/paper-kit.scss?v=1.2.0": "/static/media/nucleo-icons.f32ed5ad.eot"
+    "static/media/login-image.jpg": "/static/media/login-image.be9fa468.jpg",
+    "static/media/paper-kit.scss?v=1.2.0": "/static/media/nucleo-icons.f32ed5ad.eot",
+    "static/media/profile_Image.jpg": "/static/media/profile_Image.8176ab05.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.f693082c.js",
-    "static/js/2.f12504b9.chunk.js",
+    "static/js/2.6547fe7b.chunk.js",
     "static/css/main.cc2fe4d3.chunk.css",
-    "static/js/main.bae587c5.chunk.js"
+    "static/js/main.55eac7c8.chunk.js"
   ]
 }
